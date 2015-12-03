@@ -87,7 +87,7 @@
 
 				Laddergram.App.init("FullDictionary.txt", "cats", "dogs");
 				
-				$('input:text').focus(
+				$('input:text').on('touchstart click', 
 				function(){
 					$(this).val('');
 				});
