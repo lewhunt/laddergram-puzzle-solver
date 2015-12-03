@@ -1,0 +1,102 @@
+<!-- Copyright (c) 2015 Lewis Hunt -->
+
+<!-- Laddergram Puzzle Solver is a JavaScript app generates the shortest amount of words from a dictionary - between start and end words - where each term differs by just one letter. Such lists are often used in Word Ladder puzzle games. -->
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<title>Laddergram Puzzle Solver</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+		
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	
+
+	<body>
+
+		<div class="container">
+
+			<div class="text-center">
+		
+				<h1>laddergram
+			
+					<span class="subtitle">Puzzle Solver</span>
+				
+				</h1>
+			
+				<div class="description">This JavaScript app generates the shortest amount of words from a dictionary - between start and end words - where each term differs by just one letter. Such lists are often used in Word Ladder puzzle games.</div>
+	
+			</div>
+
+			<br/>
+
+			<div class="form-group text-center">
+		  
+				<label>Start Word</label>
+			
+				<input type="text" class="input-lg form-control text-center" id="startWord" required placeholder="Enter a start word">
+		
+			</div>	
+
+			<div class="form-group text-center">
+			
+				<label>End Word</label>
+			
+				<input type="text" class="input-lg form-control text-center" id="endWord" required placeholder="Enter an end word">
+		
+			</div>
+			
+			<br/>
+
+			<div class="form-group">
+			
+				<button class="btn btn-lg btn-primary btn-block" onclick="Laddergram.App.launchLaddergramProcessor();Laddergram.App.scrollToDisplay()">Find Laddergram Solution</button>
+		
+			</div>
+	
+			<br/>
+
+			<div id="display" class="text-center">
+		
+			</div>
+			
+	
+		</div>
+		
+		
+
+
+		<script src="js/jquery/jquery-1.11.2.min.js"></script>
+	
+		<script src="js/typeahead/typeahead.bundle.js"></script>	
+	
+		<script src="js/laddergram/model.js"></script>
+	
+		<script src="js/laddergram/app.js"></script>
+
+		<script type='text/javascript'>
+
+			$(document).ready(function() {
+
+				Laddergram.App.init("FullDictionary.txt", "cats", "dogs");
+				
+				$('input:text').focus(
+				function(){
+					$(this).val('');
+				});
+			
+			});
+
+		</script>
+		
+
+	</body>
+	
+</html>
