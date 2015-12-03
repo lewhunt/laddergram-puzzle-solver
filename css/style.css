@@ -8,6 +8,7 @@ body .container {
 	margin:0 auto;
 	opacity:0;
 	height:100%;
+	min-height:600px; 
 }
 
 .container.fadeIn {
@@ -56,7 +57,7 @@ div.min-height-specified {
 }
 
 #display {
-	min-height:250px; 
+	min-height:270px; 
 	height:100%;
 	width:100%;
 	text-align:center;
