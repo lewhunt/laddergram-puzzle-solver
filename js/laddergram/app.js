@@ -93,6 +93,7 @@ Laddergram.App = (function () {
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 	// A basic type-ahead suggestion engine to make it easier for the user to enter start and end words
 	////////////////////////////////////////////////////////////////////////////////////////////////////
+	//currently unused
 	
 	var initTypeAheadSuggestions = function (arrayData) {
 	
@@ -222,51 +223,14 @@ Laddergram.App = (function () {
 
 	};
 
-	/////////////////////////////////////////////////////////////////////////////////////////
-	// due to javascript security limits on the server and in the browser, we will allow users to save the file locally
-	/////////////////////////////////////////////////////////////////////////////////////////
-
-	var saveResultFileAsBlob = function ()
-	{
-		// don't proceed if there is no valid result
-		if (resultString=="") return;
-		
-		var textToWrite = resultString;
-		var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-		var fileNameToSaveAs = document.getElementById("resultFile").value;
-
-		var downloadLink = document.createElement("a");
-		downloadLink.download = fileNameToSaveAs;
-		downloadLink.innerHTML = "Download File";
-		if (window.webkitURL != null)
-		{
-			// Chrome allows the link to be clicked without actually adding it to the DOM.
-			downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-		}
-		else
-		{
-			// Firefox requires the link to be added to the DOM before it can be clicked.
-			downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-			downloadLink.onclick = destroyClickedElement;
-			downloadLink.style.display = "none";
-			document.body.appendChild(downloadLink);
-		}
-
-		downloadLink.click();
-	};
-
-	var destroyClickedElement = function (event)
-	{
-		document.body.removeChild(event.target);
-	};
 	
 	// expose these methods as public because they are called from the HTML page
 	return {
+	
 		init: init,
 		loadFileAsAjax: loadFileAsAjax,
 		launchLaddergramProcessor: launchLaddergramProcessor,
-		scrollToDisplay: scrollToDisplay,
-		saveResultFileAsBlob: saveResultFileAsBlob
+		scrollToDisplay: scrollToDisplay
 
 	};
 
