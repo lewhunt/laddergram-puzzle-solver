@@ -153,7 +153,9 @@ Laddergram.App = (function () {
 	
 	var scrollToDisplay = function () {
 	
-		$('html, body').animate({ scrollTop: $("#display").offset().top -10});
+		window.setTimeout( function() {
+			$('html, body').animate({ scrollTop: $("#display").offset().top -10});
+		}, 100);
 
 	};
 
