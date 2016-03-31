@@ -7,4 +7,4 @@ View demo here: http://lewhunt.github.io/laddergram-puzzle-solver
 ## Example
 Screengrab showing app in use
 
-![Example](laddergram-grab-2.gif)
+![Example](laddergram.gif)
