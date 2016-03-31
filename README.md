@@ -5,6 +5,6 @@ Laddergram Puzzle Solver is a JavaScript app that generates the shortest amount 
 View demo here: http://lewhunt.github.io/laddergram-puzzle-solver
 
 ## Example
-Screengrab showing UI in mobile format
+Screengrab showing app in use
 
-![Example](laddergram-grab.gif)
+![Example](laddergram-grab-2.gif)
