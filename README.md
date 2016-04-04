@@ -7,7 +7,7 @@ A utility app written in JavaScript that generates the shortest amount of words 
 Try it out via this link on your mobile or desktop: http://lewhunt.github.io/laddergram-puzzle-solver
 
 ### Notes
-This app is primiarily for learning purposes and further customization. It is not intended as a complete drop-in solution.
+This app is primarily for learning purposes and further customization. It is not intended as a complete drop-in solution.
 
 The JavaScript code makes use of linked lists and Queue data structures to efficiently process the dictionary results. It's funny to see the app grind away when long word ladders are generated - see screengrab :-)
 
