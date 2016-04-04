@@ -1,5 +1,5 @@
 #Laddergram Word Puzzle Solver
-A utility app written in JavaScript that generates the shortest amount of words from a dictionary - between start and end words - where each term differs by just one letter. Such lists are often used in Word Ladder puzzle games.
+A utility app written in JavaScript that generates the shortest amount of words from a dictionary - between start and end words - where each term differs by just one letter. It's a useful tool to solve Word Ladder puzzle games.
 
 ![Demo](laddergram-4.gif)
 
